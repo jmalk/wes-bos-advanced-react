@@ -50,10 +50,7 @@ export default withAuth(
     }),
     ui: {
       // Only show db admin UI for people who pass this test
-      isAccessAllowed: ({ session }) => {
-        console.log(session);
-        return !!session?.data;
-      },
+      isAccessAllowed: ({ session }) => !!session?.data,
     },
     session: withItemData(statelessSessions(sessionConfig), {
       User: 'id',
