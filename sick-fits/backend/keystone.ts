@@ -58,6 +58,7 @@ export default withAuth(
     }),
     ui: {
       // Only show db admin UI for people who pass this test
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       isAccessAllowed: ({ session }) => !!session?.data,
     },
     session: withItemData(statelessSessions(sessionConfig), {
