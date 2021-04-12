@@ -20,7 +20,6 @@ const allProductsQuery = gql`
 
 export default function Products() {
   const { data, error, loading } = useQuery(allProductsQuery);
-  console.log({ data, error, loading });
 
   if (loading) {
     return <p>Loading, please hold the line...</p>;
